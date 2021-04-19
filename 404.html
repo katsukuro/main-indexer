@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Server 1 Is Down</title>
+        <meta http-equiv="Cache-Control" content="private, no-store" />
+        <meta id="redi" http-equiv="refresh" content="time; URL=new_url" />
+    </head>
+    <body>
+        <h1>Server 1 is currently down.</h1>
+        <p id="rediWarning"></p>
+        <p id="path"></p>
+    </body>
+    <script>
+        var backupPath = "https://www2.kayrips.cloud" + window.location.pathname
+        document.getElementById("redi").content = '5; URL=' + backupPath;
+        document.getElementById("rediWarning").innerHTML = "This server is currently down, Redirecting to " + '<a href="' + backupPath + '">' + "Server 3" + '</a>' + " in 5 second..." ;
+        document.getElementById("path").innerHTML = "If you were not redirected, please click  " + '<a href="' + backupPath + '">' + "HERE" + '</a>' ;
+    </script>
+</html>
